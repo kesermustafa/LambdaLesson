@@ -33,6 +33,8 @@ public class Lambda04 {
 
         System.out.println("ogrnSayisi550FazlaEnKckNot() = " + ogrnSayisi1050FazlaEnKckNot(unv));
 
+        System.out.println("ogrSayisiKckSirala1(unv) = " + ogrSayisiKckSirala1(unv));
+
 
     }
 
@@ -57,12 +59,20 @@ public class Lambda04 {
 
     //task 03-->universite'leri ogr sayilarina gore b->k siralayiniz.
     public static List<Universite> ogrSayisiBykSirala(List<Universite> unv){
-
         return unv.stream().
                 sorted(Comparator.comparing(Universite::getOgrSayisi).
                         reversed()).
                 collect(Collectors.toList());
     }
+
+    public static List<Universite> ogrSayisiKckSirala1(List<Universite> unv){
+        return unv.stream().
+                sorted(Comparator.comparing(Universite::getOgrSayisi)).
+                collect(Collectors.toList());
+    }
+
+
+
 
     // task matematik bolumlerinin sayisini print ediniz..
 
